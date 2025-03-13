@@ -1,0 +1,11 @@
+# color theme
+theme = Dracula+
+background-opacity = 0.8
+background-blur = true
+
+# font setting
+font-family = SauceCodeProNerdFont
+font-size = 12
+
+# keybinding
+keybind = unconsumed:ctrl+shift+enter = toggle_split_zoom
