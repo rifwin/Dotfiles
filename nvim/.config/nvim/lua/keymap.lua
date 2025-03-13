@@ -62,7 +62,7 @@ vim.keymap.set("n", "<C-S-f>", vim.lsp.buf.format, {})
 vim.keymap.set("n", "<leader>fd", vim.lsp.buf.format, {})
 
 -- open floating terminal
-vim.api.nvim_set_keymap(
+vim.keymap.set(
   "n",
   "<C-S-Enter>",
   ":FloatermNew --width=0.8 --height=0.8 <CR>",
