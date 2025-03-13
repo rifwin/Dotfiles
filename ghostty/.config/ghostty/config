@@ -8,4 +8,4 @@ font-family = SauceCodeProNerdFont
 font-size = 12
 
 # keybinding
-keybind = unconsumed:ctrl+shift+enter = toggle_split_zoom
+keybind = unconsumed:ctrl+shift+enter=toggle_split_zoom
