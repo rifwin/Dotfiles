@@ -3,4 +3,4 @@
   <img src="assets/light.png#gh-dark-mode-only" alt="Dark Logo" width="200">
 </p>
 
-<h1 align="center" style="font-size:medium"> Hello There </h1>
+<h1 align="center" style="font-size: small"> Hello There </h1>
