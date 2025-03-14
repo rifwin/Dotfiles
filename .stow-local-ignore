@@ -22,3 +22,7 @@ _darcs
 ^/README.*
 ^/LICENSE.*
 ^/COPYING
+
+# everthing on assets folder is just image for repo
+# better ignore it
+assets/
