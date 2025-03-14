@@ -15,3 +15,4 @@ Hi there! 👋 Welcome to my personal dotfiles github repository. Feel free to c
 Thanks for stopping by and checking out my dotfiles! 🎉  
 Happy customizing, and I hope you find something useful here.  
 Feel free to join the discussion if you want to chat or share ideas. 😊
+
