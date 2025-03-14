@@ -3,7 +3,7 @@
   <img src="assets/light.png#gh-dark-mode-only" alt="Dark Logo" width="200">
 </p>
 
-# Rifwin Dotfiles
+# Dotfiles
 
 Hi there! 👋 Welcome to my personal dotfiles repository. Feel free to copy, paste, and use anything you find here to customize your own setup!
 
