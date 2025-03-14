@@ -5,7 +5,7 @@
 
 # Dotfiles
 
-Hi there! 👋 Welcome to my personal dotfiles repository. Feel free to copy, paste, and use anything you find here to customize your own setup!
+Hi there! 👋 Welcome to my personal dotfiles github repository. Feel free to copy, paste, and use anything you find here to customize your own setup!
 
 ## ⚠️ A Quick Note:
 - **Issues:** Closed because this is a personal public repo.
