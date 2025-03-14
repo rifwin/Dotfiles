@@ -74,6 +74,13 @@ local plugins = {
     "Civitasv/cmake-tools.nvim",
   },
 
+  -- lualine cosmetics plugin
+  {
+    name = "nvim-lualine",
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" }
+  },
+
   -- editor theme plugin
   {
     name = "dracula-theme",

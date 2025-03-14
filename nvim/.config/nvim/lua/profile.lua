@@ -10,6 +10,7 @@ local miniPairs = require("mini.pairs")
 local cmakeTools = require("cmake-tools")
 local telescope = require("telescope")
 local neoTree = require("neo-tree")
+local lualine = require("lualine")
 
 -- setup tree-sitter language setting
 treeSitter.setup({
@@ -100,3 +101,10 @@ vim.bo.softtabstop = 2
 
 -- show max text width indicator
 vim.cmd("set colorcolumn=80")
+
+-- lualine setup
+lualine.setup({
+  options = {
+    theme = "dracula"
+  }
+})
