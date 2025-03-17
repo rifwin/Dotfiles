@@ -8,9 +8,9 @@
 Hi there! 👋 Welcome to my personal dotfiles github repository. Feel free to copy, paste, and use anything you find here to customize your own setup!
 
 ## A Quick Note:
-- **Issues:** Closed because this is a personal public repo.
-- **Pull Requests:** Also closed for the same reason.
-- **Discussions:** Always open! Feel free to stop by if you'd like to chat or share ideas.
+- Issues are closed because this is a personal public repo.
+- Pull Requests also closed for the same reason.
+- Discussions is always open! Feel free to stop by if you'd like to chat or share ideas.
 
 Thanks for stopping by and checking out my dotfiles! 🎉  
 Happy customizing, and I hope you find something useful here.  
