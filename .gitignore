@@ -5,6 +5,6 @@ nvim/.config/nvim/lazy-lock.json
 # this is dummy file for storing touchpad file
 # if this file present then touchpad is on
 # if not then touchpad is off
-!hypr/.config/hypr/scripts/cache/.gitkeep
 hypr/.config/hypr/scripts/cache/*
+!hypr/.config/hypr/scripts/cache/.gitkeep
 
