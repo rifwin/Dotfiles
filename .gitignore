@@ -2,7 +2,7 @@
 nvim/.config/nvim/.luarc.json 
 nvim/.config/nvim/lazy-lock.json 
 
-# this is dummy file for storing touchpad file
+# this is dummy file for storing touchpad state
 # if this file present then touchpad is on
 # if not then touchpad is off
 hypr/.config/hypr/scripts/cache/*
