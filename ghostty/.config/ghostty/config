@@ -4,6 +4,10 @@ background = 1c1c1c
 background-opacity = 0.6
 background-blur = true
 
+# inner padding
+window-padding-x = 6
+window-padding-y = 6
+
 # font setting
 font-family = SauceCodePro Nerd Font
 font-size = 12
