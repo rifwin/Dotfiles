@@ -1,0 +1,90 @@
+* {
+    font-family: FontAwesome, SauceCodePro Nerd Font;
+    font-size: 13px;
+}
+
+window {
+    background-color: rgba(50, 50, 50, 0.3);
+    border: 1px solid rgba(60, 60, 60, 1);
+    border-radius: 20px;
+}
+
+tooltip {
+  color: rgba(180, 180, 180, 1);
+  background-color: rgba(60, 60, 60, 1);
+  border: 0px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+button {
+  color: rgba(100, 100, 100, 1);
+  background: none;
+  text-shadow: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 20px;
+}
+
+button:hover {
+  color: rgba(180, 180, 180, 1);
+  background: rgba(100, 100, 100, 0.3);
+}
+
+button.active {
+  color: rgba(180, 180, 180, 1);
+}
+
+#waybar .module {
+  color: rgba(180, 180, 180, 1);
+}
+
+#waybar .modules-center{
+  border-radius: 20px 20px 20px 20px;
+  background-color: rgba(100, 100, 100, 0.3);
+}
+
+#waybar .modules-center label{
+  padding: 0px 6px 0px 6px;
+}
+
+#waybar .modules-left{
+  border-radius: 20px 20px 20px 20px;
+  background-color: rgba(100, 100, 100, 0.3);
+}
+
+#waybar .modules-left label{
+  padding: 0px 10px 0px 10px;
+}
+
+#waybar .modules-right{
+  border-radius: 20px 20px 20px 20px;
+  background-color: rgba(100, 100, 100, 0.3);
+}
+
+#waybar .modules-right label{
+  padding: 0px 10px 0px 10px;
+}
+
+#clock {
+  border-left: 1px solid rgba(80, 80, 80, 1);
+  border-right: 1px solid rgba(80, 80, 80, 1);
+}
+
+#tray {
+  padding-right: 12px;
+}
+
+menu {
+	border-radius: 20px;
+  background-color: rgba(60, 60, 60, 1);
+  color: rgba(180, 180, 180, 1);
+}
+
+menuitem {
+	border-radius: 20px;
+}
+
+menuitem:hover {
+  background-color: rgba(100, 100, 100, 1);
+}

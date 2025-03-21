@@ -1,10 +1,11 @@
 # color theme
-theme = Dracula+
-background-opacity = 0.8
+theme = rose-pine-moon
+background = 1c1c1c
+background-opacity = 0.6
 background-blur = true
 
 # font setting
-font-family = SauceCodeProNerdFont
+font-family = SauceCodePro Nerd Font
 font-size = 12
 
 # keybinding

@@ -1,0 +1,127 @@
+// -*- mode: jsonc -*-
+{
+  "position": "bottom",
+  "height": 34,
+  "spacing": 0,
+  "margin-left": 10,
+  "margin-right": 10,
+  "margin-bottom": 8,
+  "reload_style_on_change": true,
+  "modules-left": [
+    "cpu",
+    "memory",
+    "temperature"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "backlight",
+    "wireplumber",
+    "power-profiles-daemon",
+    "tray",
+    "clock",
+    "custom/power"
+  ],
+  // Modules configuration
+  "hyprland/workspaces": {
+    "sort-by-number": true,
+    "disable-scroll": true,
+    "all-outputs": false,
+    "warp-on-scroll": false,
+    "active-only": false,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "I",
+      "2": "II",
+      "3": "III",
+      "4": "IV",
+      "5": "V",
+      "6": "VI",
+      "7": "VII",
+      "8": "VIII",
+      "9": "IX",
+      "10": "X",
+      "urgent": "",
+      "focused": "",
+      "default": ""
+    }
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 12
+  },
+  "clock": {
+    "timezone": "Asia/Jakarta",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "{:%Y-%m-%d %H:%M}"
+  },
+  "cpu": {
+    "format": " {usage}% {icon}",
+    "format-icons": "",
+    "tooltip": true
+  },
+  "memory": {
+    "format": "{percentage}% {icon}",
+    "format-icons": ""
+  },
+  "temperature": {
+    // "thermal-zone": 2,
+    // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 90,
+    // "format-critical": "{temperatureC}°C {icon}",
+    "format": "{temperatureC}°C {icon} ",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "backlight": {
+    "format": " {icon}",
+    "tooltip-format": "{icon} Brighness: {percent}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "power-profiles-daemon": {
+    "format": "{icon} ",
+    "tooltip-format": "{icon} Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "󰗑",
+      "power-saver": ""
+    }
+  },
+  "wireplumber": {
+    "format": "{icon} ",
+    "tooltip-format": "{icon}  Volume: {volume}%",
+    "format-muted": " ",
+    "on-click": "pwvucontrol",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "custom/power": {
+    "format": " ⏻ ",
+    "tooltip": false,
+    "menu": "on-click",
+    "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+    "menu-actions": {
+      "shutdown": "shutdown",
+      "reboot": "reboot",
+      "suspend": "systemctl suspend",
+      "hibernate": "systemctl hibernate"
+    }
+  }
+}

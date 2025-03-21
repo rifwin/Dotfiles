@@ -2,7 +2,6 @@ local treeSitter = require("nvim-treesitter.configs")
 local mason = require("mason")
 local masonLspConfig = require("mason-lspconfig")
 local nvimLspConfig = require("lspconfig")
-local draculaTheme = require("dracula")
 local cmp = require("cmp")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local lspKind = require("lspkind")
@@ -11,6 +10,7 @@ local cmakeTools = require("cmake-tools")
 local telescope = require("telescope")
 local neoTree = require("neo-tree")
 local lualine = require("lualine")
+local rosepineTheme = require("rose-pine")
 
 -- setup tree-sitter language setting
 treeSitter.setup({
@@ -39,6 +39,7 @@ nvimLspConfig.zls.setup({ capabilities = capabilities })
 nvimLspConfig.eslint.setup({ capabilities = capabilities })
 nvimLspConfig.bashls.setup({ capabilities = capabilities })
 nvimLspConfig.cmake.setup({ capabilities = capabilities })
+nvimLspConfig.jsonls.setup({ capabilities = capabilities })
 
 -- auto completion plugin
 cmp.setup({
@@ -84,8 +85,8 @@ neoTree.setup({
 })
 
 -- set editor theme
-draculaTheme.setup({ transparent_bg = true })
-vim.cmd("colorscheme dracula-soft")
+rosepineTheme.setup({ styles = { transparency = true } })
+vim.cmd('colorscheme rose-pine-moon')
 
 -- yank to system clipboard
 vim.opt.clipboard = "unnamedplus"
@@ -105,6 +106,6 @@ vim.cmd("set colorcolumn=80")
 -- lualine setup
 lualine.setup({
   options = {
-    theme = "dracula"
+    theme = "rose-pine"
   }
 })

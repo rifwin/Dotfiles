@@ -83,8 +83,10 @@ local plugins = {
 
   -- editor theme plugin
   {
-    name = "dracula-theme",
-    "Mofiqul/dracula.nvim",
+    name = "rose-pine",
+    "rose-pine/neovim",
+    lazy = false
+
   }
 }
 
