@@ -28,7 +28,13 @@ local plugins = {
     build = ":TSUpdate",
   },
 
-  -- formatter & linter plugin
+  -- basic config for nvim lsp
+  {
+    name = "nvim-lspconfig",
+    "neovim/nvim-lspconfig",
+  },
+
+  -- lsp automatic package installer 
   {
     name = "mason",
     "williamboman/mason.nvim",
@@ -37,9 +43,11 @@ local plugins = {
     name = "mason-lspconfig",
     "williamboman/mason-lspconfig.nvim",
   },
+
+  -- extend lsp formatter and linter
   {
-    name = "nvim-lspconfig",
-    "neovim/nvim-lspconfig",
+    name = "none-ls",
+    "nvimtools/none-ls.nvim",
   },
 
   -- auto completion plugin

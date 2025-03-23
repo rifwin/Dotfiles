@@ -1,7 +1,7 @@
 # color theme
 theme = rose-pine-moon
-background = 1c1c1c
-background-opacity = 0.6
+background = 333333
+background-opacity = 0.5
 background-blur = true
 
 # inner padding
@@ -9,8 +9,8 @@ window-padding-x = 6
 window-padding-y = 6
 
 # font setting
-font-family = SauceCodePro Nerd Font
+font-family = FiraMono Nerd Font
 font-size = 12
 
-# keybinding
+# keybindin8
 keybind = unconsumed:ctrl+shift+enter=toggle_split_zoom
