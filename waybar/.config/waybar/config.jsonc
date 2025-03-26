@@ -23,7 +23,6 @@
     "clock",
     "custom/power"
   ],
-  // Modules configuration
   "hyprland/workspaces": {
     "sort-by-number": true,
     "disable-scroll": true,
