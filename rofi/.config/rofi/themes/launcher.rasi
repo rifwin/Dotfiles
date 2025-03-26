@@ -1,14 +1,8 @@
+@import "~/.config/rofi/themes/config.rasi"
+
 * {
-  background: #36363633;
-  background-alt: #60606033;
-  foreground: #BAC5D0FF;
-  selected: #5294E2FF;
-  active: #98C379FF;
-  urgent: #E06B74FF;
-  font: "GoMono Nerd Font 11";
 }
 
-/* Configuration */
 configuration {
   modi: "drun";
   show-icons: true;
@@ -16,13 +10,12 @@ configuration {
   drun-display-format: "{name}";
 }
 
-/* Main Window */
 window {
   transparency: "real";
   location: center;
   anchor: center;
   fullscreen: false;
-  width: 750px;
+  width: 500px;
   x-offset: 0px;
   y-offset: 0px;
 
@@ -36,7 +29,6 @@ window {
   cursor: "default";
 }
 
-/* Main Box */
 mainbox {
   enabled: true;
   spacing: 0px;
@@ -49,7 +41,6 @@ mainbox {
   children: [ "inputbar", "listview" ];
 }
 
-/* Inputbar */
 inputbar {
   enabled: true;
   spacing: 10px;
@@ -87,11 +78,10 @@ entry {
   placeholder-color: inherit;
 }
 
-/* Listview */
 listview {
   enabled: true;
-  columns: 5;
-  lines: 3;
+  columns: 3;
+  lines: 4;
   cycle: true;
   dynamic: true;
   scrollbar: false;
@@ -100,7 +90,7 @@ listview {
   fixed-height: true;
   fixed-columns: true;
   
-  spacing: 5px;
+  spacing: 0px;
   margin: 0px;
   padding: 10px;
   border: 0px solid;
@@ -118,7 +108,6 @@ scrollbar {
   background-color: @background-alt;
 }
 
-/* Elements */
 element {
   enabled: true;
   spacing: 15px;
@@ -146,7 +135,7 @@ element selected.normal {
 element-icon {
   background-color: transparent;
   text-color: inherit;
-  size: 60px;
+  size: 50px;
   cursor: inherit;
 }
 
@@ -159,7 +148,6 @@ element-text {
   horizontal-align: 0.5;
 }
 
-/* Message */
 error-message {
   padding: 15px;
   border: 2px solid;

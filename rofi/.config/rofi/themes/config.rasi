@@ -1,0 +1,9 @@
+* {
+  background: #36363633;
+  background-alt: #60606033;
+  foreground: #bfbfbfff;
+  selected: #d4d4d4ff;
+  active: #98c379ff;
+  urgent: #f28089ff;
+  font: "GoMono Nerd Font 12";
+}
