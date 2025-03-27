@@ -12,7 +12,7 @@ local neoTree = require("neo-tree")
 local lualine = require("lualine")
 local rosepineTheme = require("rose-pine")
 
--- setup tree-sitter language setting
+-- setup tree-sitter code highlight 
 treeSitter.setup({
   highlight = { enable = true },
   indent = { enable = true },
