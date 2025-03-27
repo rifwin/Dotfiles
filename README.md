@@ -12,7 +12,7 @@ Hi there! 👋 Welcome to my personal dotfiles github repository. Feel free to c
 - Pull Requests also closed for the same reason.
 - Discussions is always open! Feel free to stop by if you'd like to chat or share ideas.
 
-## Package used:
+## Package Used:
 - neovim (btw)
 - uwsm
 - hyprpaper
