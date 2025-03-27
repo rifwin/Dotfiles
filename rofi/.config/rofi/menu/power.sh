@@ -7,38 +7,48 @@ reboot="󰜉"
 sleep="󰤄"
 logout="󰈆"
 
-selection=$(echo -e "$shutdown\n$reboot\n$sleep\n$logout" |\
+selection=$(echo -e\
+  "$shutdown\n$reboot\n$sleep\n$logout" |\
   rofi -dmenu\
   -theme $themeDir\
   -mesg "Power Options"
 )
 
 confirmCmd() {
-  echo -e "Yes\nNo" | rofi -dmenu -theme $themeDir -mesg "Are You Sure ?"
+  echo -e "Yes\nNo" |\
+    rofi -dmenu\
+    -theme $themeDir\
+    -theme-str "window {width: 316px;}"\
+    -mesg "Are You Sure ?"
 }
 
 case "$selection" in
     $shutdown)
         confirmVar=$(confirmCmd)
         if [ "$confirmVar" = "Yes" ]; then 
-          echo "Shutdown Yes"
+          systemctl poweroff
         fi
         ;;
     $reboot)
         confirmVar=$(confirmCmd)
         if [ "$confirmVar" = "Yes" ]; then 
-          echo "Reboot Yes"
+          systemctl reboot
         fi
         ;;
     $sleep)
-        echo "Sleep"
+        confirmVar=$(confirmCmd)
+        if [ "$confirmVar" = "Yes" ]; then 
+          systemctl suspend
+        fi
         ;;
     $logout)
-        echo "Logout"
+        confirmVar=$(confirmCmd)
+        if [ "$confirmVar" = "Yes" ]; then 
+          uwsm stop
+        fi
         ;;
     *)
         echo "Invalid option"
         ;;
 esac
-
 
