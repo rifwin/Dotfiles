@@ -1,6 +1,6 @@
 <p align="center">
-  <img src="dark.png#gh-light-mode-only" alt="Light Logo" width="100px">
-  <img src="light.png#gh-dark-mode-only" alt="Dark Logo" width="100px">
+  <img src="dark.png#gh-light-mode-only" alt="Light Logo" width="200px">
+  <img src="light.png#gh-dark-mode-only" alt="Dark Logo" width="200px">
 </p>
 
 # Dotfiles
