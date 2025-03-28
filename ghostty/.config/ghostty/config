@@ -1,7 +1,7 @@
 # color theme
 theme = rose-pine-moon
 background = 333333
-background-opacity = 0.5
+background-opacity = 0.6
 background-blur = true
 
 # inner padding
