@@ -15,7 +15,7 @@ selection=$(echo -e\
 )
 
 confirmCmd() {
-  echo -e "Yes\nNo" |\
+  echo -e "No\nYes" |\
     rofi -dmenu\
     -theme $themeDir\
     -theme-str "window {width: 316px;}"\
