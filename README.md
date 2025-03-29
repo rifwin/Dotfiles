@@ -7,12 +7,12 @@
 
 Hi there! 👋 Welcome to my personal dotfiles github repository. Feel free to copy, paste, and use anything you find here to customize your own setup!
 
-## A Quick Note:
+### A Quick Note:
 - Issues are closed because this is a personal public repo.
 - Pull Requests also closed for the same reason.
 - Discussions is always open! Feel free to stop by if you'd like to chat or share ideas.
 
-## Package Used:
+### Package Used:
 - hyprland
 - neovim (btw)
 - uwsm
@@ -23,8 +23,6 @@ Hi there! 👋 Welcome to my personal dotfiles github repository. Feel free to c
 - blueman
 - ghostty
 - yazi
-- python
-- nodejs (fnm)
 
 Thanks for stopping by and checking out my dotfiles! 🎉  
 Happy customizing, and I hope you find something useful here.  
