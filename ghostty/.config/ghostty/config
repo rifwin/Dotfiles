@@ -13,5 +13,5 @@ font-family = FiraMono Nerd Font
 font-size = 12
 
 # keybindin8
-keybind = unconsumed:ctrl+shift+enter=toggle_split_zoom
-keybind = unconsumed:ctrl+enter=toggle_split_zoom
+keybind = unconsumed:ctrl+shift+enter=toggle_fullscreen
+keybind = unconsumed:ctrl+enter=toggle_fullscreen
