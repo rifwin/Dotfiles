@@ -88,3 +88,9 @@ menuitem {
 menuitem:hover {
   background-color: rgba(100, 100, 100, 1);
 }
+
+#workspaces button.active {
+  background-color: rgba(180, 180, 180, 1);
+  color: rgba(60, 60, 60, 1);
+}
+

@@ -27,6 +27,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     os.exit(1)
   end
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 -- lazy.nvim config
@@ -44,3 +45,11 @@ require("profile")
 
 -- init editor keymap
 require("keymap")
+
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+})
+
