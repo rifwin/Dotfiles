@@ -11,11 +11,11 @@ cacheFile="$HOME/.config/hypr/scripts/cache/touchpad"
 # if not then create file and turn on touchpad
 touchpadToggle() {
   if [ -f $cacheFile ]; then 
-    notify-send "touchpad off"
+    notify-send "touchpad off" -t 1000
     rm $cacheFile
     hyprctl keywords device[$deviceId]:enabled false
   else
-    notify-send "touchpad on"
+    notify-send "touchpad on" -t 1000
     touch $cacheFile
     hyprctl keywords device[$deviceId]:enabled true
   fi
