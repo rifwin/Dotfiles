@@ -1,4 +1,5 @@
 [global]
+font = "GoMono Nerd Font 12"
 monitor = 1
 follow = none
 
@@ -7,9 +8,17 @@ offset = (10, 10)
 width = 350
 frame_width = 1
 
-font = "GoMono Nerd Font 12"
 frame_color = "#333333"
-background = "#d7827e"
+corner_radius = 6
+
+[urgency_low]
+background = "#b4b4b4"
 foreground = "#333333"
 
-corner_radius = 6
+[urgency_normal]
+background = "#9ccfd8"
+foreground = "#333333"
+
+[urgency_critical]
+background = "#ea9a97"
+foreground = "#333333"
