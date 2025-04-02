@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # args 
-actionName=""
-deviceId=""
+deviceId="elan1200:00-04f3:3045-touchpad"
 
 # cache file location
 cacheFile="$HOME/.config/hypr/scripts/cache/touchpad"
@@ -31,36 +30,15 @@ touchpadInit() {
   fi
 }
 
-# parse argument
-for arg in "$@"; do
-  case $arg in
-    --id=*)
-      deviceId="${arg#*=}"
-      shift
-      ;;
-    --action=*)
-      actionName="${arg#*=}"
-      shift
-      ;;
-    *)
-      notify-send "Unkown argument: $arg"
-      ;;
-  esac
-done
-
-case $actionName in 
-  toggle)
-    touchpadToggle
-    ;;
+case $@ in
   init)
     touchpadInit
     ;;
+  toggle)
+    touchpadToggle
+    ;;
   *)
-    notify-send "Unkown action $actionName"
+    notify-send "unknown args $@" -t 1000 -u low
     ;;
 esac
-
-
-
-
 
