@@ -12,7 +12,7 @@ local neoTree = require("neo-tree")
 local lualine = require("lualine")
 local rosepineTheme = require("rose-pine")
 
--- setup tree-sitter code highlight 
+-- setup tree-sitter code highlight
 treeSitter.setup({
   highlight = { enable = true },
   indent = { enable = true },
@@ -33,7 +33,15 @@ mason.setup()
 masonLspConfig.setup({ ensure_installed = { "lua_ls" } })
 
 -- linter & formatter
-nvimLspConfig.lua_ls.setup({ capabilities = capabilities })
+nvimLspConfig.lua_ls.setup({
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { "vim" }
+      }
+    }
+  }
+})
 nvimLspConfig.clangd.setup({ capabilities = capabilities })
 nvimLspConfig.zls.setup({ capabilities = capabilities })
 nvimLspConfig.eslint.setup({ capabilities = capabilities })

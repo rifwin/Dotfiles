@@ -7,16 +7,18 @@ vim.api.nvim_set_keymap('i', '<S-{>', '{', { noremap = false })
 -- lazy keymap
 vim.api.nvim_set_keymap("n", "<leader>lz", ":Lazy<CR>", {})
 
--- navigation remap k&j
+-- navigation remap jump up/down
 vim.keymap.set("n", "j", "<Up>", { noremap = true })
 vim.keymap.set("n", "k", "<Down>", { noremap = true })
 
 vim.keymap.set("v", "j", "<Up>", { noremap = true })
 vim.keymap.set("v", "k", "<Down>", { noremap = true })
 
--- jump space letf/right when on normal mode
+-- jump to next/before space
 vim.keymap.set("n", "<C-l>", "<C-Right>", {})
 vim.keymap.set("n", "<C-h>", "<C-Left>", {})
+vim.keymap.set("v", "<C-l>", "<C-Right>", {})
+vim.keymap.set("v", "<C-h>", "<C-Left>", {})
 
 -- move left/right when on insert mode
 vim.keymap.set("i", "<C-S-l>", "<Right>", {})
@@ -60,6 +62,11 @@ vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 -- lsp format document
 vim.keymap.set("n", "<C-S-f>", vim.lsp.buf.format, {})
 vim.keymap.set("n", "<leader>fd", vim.lsp.buf.format, {})
+
+-- clear search highlight
+vim.keymap.set("n", "<C-/>", function ()
+  vim.cmd("nohlsearch")
+end, {})
 
 -- open floating terminal
 vim.keymap.set(
