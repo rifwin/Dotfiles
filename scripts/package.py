@@ -2,6 +2,8 @@ import subprocess
 from utils import text_red, text_green, text_yellow, text_blue
 
 # TODO: implement automatic uninstall if the file is not on the list
+# TODO: fnm installer still doing duplicate append on .bashrc init script
+#       so try to find out how to fix it
 
 # Pacman package to install
 PACMAN_PACKAGES = (
@@ -45,6 +47,27 @@ FLATPAK_PACKAGES = (
     "org.mozilla.firefox",
     "org.onlyoffice.desktopeditors",
 )
+
+# this one for installing nodejs version manager (fnm)
+def fnm_install():
+    print(text_blue("Trying to install nodejs version manager (fnm):\n"))
+    try:
+        run_curl = subprocess.run(
+            ["curl", "-fsSL", "https://fnm.vercel.app/install"],
+            check=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True
+        )
+        run_bash = subprocess.run(
+            ["bash"],
+            input=run_curl.stdout,  # Pipe curl output into bash
+            check=True,
+            text=True
+        )
+        print(run_bash.stdout)
+    except subprocess.CalledProcessError as e:
+        print(text_red("Failed to install packages:\n"), e.stderr)
 
 # install pacman packages
 def pacman_install(packages): 
@@ -93,3 +116,4 @@ def flatpak_install(packages):
 # run all install function
 pacman_install(PACMAN_PACKAGES)
 flatpak_install(FLATPAK_PACKAGES)
+fnm_install()
