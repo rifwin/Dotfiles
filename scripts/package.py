@@ -28,7 +28,8 @@ PACMAN_PACKAGES = (
     "btop",
     "fastfetch",
     "inkscape",
-    "gimp"
+    "gimp",
+    "github-cli"
 )
 
 def pacman_install(packages): 
