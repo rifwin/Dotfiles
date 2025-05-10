@@ -49,6 +49,9 @@ nvimLspConfig.bashls.setup({ capabilities = capabilities })
 nvimLspConfig.cmake.setup({ capabilities = capabilities })
 nvimLspConfig.jsonls.setup({ capabilities = capabilities })
 
+vim.lsp.enable("lua_ls")
+vim.lsp.enable("ruff")
+
 -- auto completion plugin
 cmp.setup({
   sources = { { name = "nvim_lsp" }, { name = "path" }, { name = "buffer" } },
