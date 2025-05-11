@@ -47,7 +47,9 @@ FLATPAK_PACKAGES = (
 )
 
 # run all install function
+package_handler.pacman_update()
 package_handler.pacman_install(PACMAN_PACKAGES)
+package_handler.flatpak_update()
 package_handler.flatpak_install(FLATPAK_PACKAGES)
 package_handler.fnm_install()
 

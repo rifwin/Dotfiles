@@ -3,7 +3,19 @@ import subprocess
 from utils import text_red, text_blue
 
 
-# install pacman packages
+# pacman packages utilities
+def pacman_update():
+    print(text_blue("Trying to update pacman packages:\n"))
+    try:
+        cmd = ["sudo", "pacman", "-Syu"]
+        result = subprocess.run(
+            cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True
+        )
+        print(result.stdout)
+    except subprocess.CalledProcessError as e:
+        print(text_red("Failed to install packages:\n"), e.stderr)
+
+
 def pacman_install(packages):
     print(text_blue("Trying to install pacman packages:\n"))
     print(f"{', '.join(packages)}\n")
@@ -17,7 +29,19 @@ def pacman_install(packages):
         print(text_red("Failed to install packages:\n"), e.stderr)
 
 
-# install flatpak packages
+# flatpak packages utilities
+def flatpak_update():
+    print(text_blue("Trying to update flatpak packages:\n"))
+    try:
+        cmd = ["flatpak", "update", "--assumeyes"]
+        result = subprocess.run(
+            cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True
+        )
+        print(result.stdout)
+    except subprocess.CalledProcessError as e:
+        print(text_red("Failed to install packages:\n"), e.stderr)
+
+
 def flatpak_install(packages):
     print(text_blue("Trying to install flatpak packages:\n"))
     print(f"{', '.join(packages)}\n")
