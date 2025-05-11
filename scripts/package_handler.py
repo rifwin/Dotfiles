@@ -2,6 +2,8 @@ import os
 import subprocess
 from utils import text_red, text_blue
 
+# TODO: implement automatic uninstall if the file is not on the list
+
 
 # pacman packages utilities
 def pacman_update():

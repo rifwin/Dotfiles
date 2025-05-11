@@ -1,7 +1,5 @@
 import package_handler
 
-# TODO: implement automatic uninstall if the file is not on the list
-
 # Pacman package to install
 PACMAN_PACKAGES = (
     "noto-fonts",
