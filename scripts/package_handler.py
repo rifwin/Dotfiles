@@ -9,7 +9,7 @@ from utils import text_red, text_blue
 def pacman_update():
     print(text_blue("Trying to update pacman packages:\n"))
     try:
-        cmd = ["sudo", "pacman", "-Syu"]
+        cmd = ["sudo", "pacman", "-Syu", "--noconfirm"]
         result = subprocess.run(
             cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True
         )
@@ -86,6 +86,6 @@ def fnm_install():
 
     fnm_dir = os.getenv("FNM_DIR")
     if fnm_dir:
-        print(text_blue(f"skipping fnm install, already installed on '{fnm_dir}'"))
+        print(f"skipping fnm install, already installed on '{fnm_dir}'")
     else:
         install()
