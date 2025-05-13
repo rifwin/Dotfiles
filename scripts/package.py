@@ -35,13 +35,14 @@ PACMAN_PACKAGES = (
 
 # Flatpak package to install
 FLATPAK_PACKAGES = (
-    "com.brave.Browser",
     "com.discordapp.Discord",
-    "com.google.Chrome",
     "com.mattjakeman.ExtensionManager",
     "org.kde.kdenlive",
-    "org.mozilla.firefox",
     "org.onlyoffice.desktopeditors",
+    "com.google.Chrome",
+    "com.brave.Browser",
+    "net.waterfox.waterfox"
+    "org.mozilla.firefox",
 )
 
 # run all install function
