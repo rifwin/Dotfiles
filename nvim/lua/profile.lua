@@ -1,16 +1,14 @@
 local treeSitter = require("nvim-treesitter.configs")
 local mason = require("mason")
 local masonLspConfig = require("mason-lspconfig")
-local nvimLspConfig = require("lspconfig")
-local cmp = require("cmp")
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-local lspKind = require("lspkind")
 local miniPairs = require("mini.pairs")
 local cmakeTools = require("cmake-tools")
 local telescope = require("telescope")
 local neoTree = require("neo-tree")
 local lualine = require("lualine")
 local rosepineTheme = require("rose-pine")
+local blinkcmp = require("blink.cmp")
+
 
 -- setup tree-sitter code highlight
 treeSitter.setup({
@@ -24,16 +22,47 @@ treeSitter.setup({
     "python",
     "lua",
     "bash",
-    "cmake"
+    "cmake",
+    "zig"
   },
 })
 
 -- mason lsp package manager
+-- write any necessary lsp that need to be installed here
+-- let mason handle it
+-- doesnt need to manual install using os level package manager
 mason.setup()
-masonLspConfig.setup({ ensure_installed = { "lua_ls" } })
+masonLspConfig.setup({
+  automatic_enable = true,
+  ensure_installed = {
+    "lua_ls",
+    "ruff",
+    "basedpyright",
+    "clangd",
+    "zls",
+    "biome",
+    "bashls",
+    "cmake",
+    "jsonls"
+  }
+})
 
--- linter & formatter
-nvimLspConfig.lua_ls.setup({
+-- auto completion
+blinkcmp.setup({})
+local capabilities = {
+  textDocument = {
+    foldingRange = {
+      dynamicRegistration = false,
+      lineFoldingOnly = true
+    }
+  }
+}
+capabilities = blinkcmp.get_lsp_capabilities(capabilities)
+
+-- LSP configuration after Nvim 0.11+
+-- lua
+vim.lsp.config("lua_ls", {
+  capabilities = capabilities,
   settings = {
     Lua = {
       diagnostics = {
@@ -42,28 +71,24 @@ nvimLspConfig.lua_ls.setup({
     }
   }
 })
-nvimLspConfig.clangd.setup({ capabilities = capabilities })
-nvimLspConfig.zls.setup({ capabilities = capabilities })
-nvimLspConfig.eslint.setup({ capabilities = capabilities })
-nvimLspConfig.bashls.setup({ capabilities = capabilities })
-nvimLspConfig.cmake.setup({ capabilities = capabilities })
-nvimLspConfig.jsonls.setup({ capabilities = capabilities })
-
-vim.lsp.enable("lua_ls")
-vim.lsp.enable("ruff")
-
--- auto completion plugin
-cmp.setup({
-  sources = { { name = "nvim_lsp" }, { name = "path" }, { name = "buffer" } },
-  formatting = {
-    -- put a tiny icon on completion menu
-    format = lspKind.cmp_format({
-      mode = "symbol_text",
-      maxwidth = 50,
-      ellipsis_char = "...",
-      show_labelDetails = true,
-    })
-  }
+-- python
+vim.lsp.config("ruff", {
+  capabilities = capabilities,
+})
+vim.lsp.config("basedpyright", {
+  capabilities = capabilities,
+})
+-- bash
+vim.lsp.config("bashls", {
+  capabilities = capabilities,
+})
+-- javascript/typescript
+vim.lsp.config("biome", {
+  capabilities = capabilities,
+})
+-- c/cpp
+vim.lsp.config("clangd", {
+  capabilities = capabilities,
 })
 
 -- auto pairs plugin

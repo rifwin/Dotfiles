@@ -28,23 +28,21 @@ local plugins = {
     build = ":TSUpdate",
   },
 
-  -- basic config for nvim lsp
+  -- lsp automatic package installer
+  {
+    name = "mason",
+    "mason-org/mason.nvim",
+  },
+  {
+    name = "mason-lspconfig",
+    "mason-org/mason-lspconfig.nvim",
+  },
   {
     name = "nvim-lspconfig",
     "neovim/nvim-lspconfig",
   },
 
-  -- lsp automatic package installer 
-  {
-    name = "mason",
-    "williamboman/mason.nvim",
-  },
-  {
-    name = "mason-lspconfig",
-    "williamboman/mason-lspconfig.nvim",
-  },
-
-  -- extend lsp formatter and linter
+  -- extend formatter and linter
   {
     name = "none-ls",
     "nvimtools/none-ls.nvim",
@@ -52,16 +50,10 @@ local plugins = {
 
   -- auto completion plugin
   {
-    name = "nvim-cmp",
-    "hrsh7th/nvim-cmp",
-    dependencies = {
-      "onsails/lspkind.nvim",
-      "hrsh7th/cmp-nvim-lsp",
-      "hrsh7th/cmp-path",
-      "hrsh7th/cmp-buffer",
-      { "L3MON4D3/LuaSnip", build = "make install_jsregexp" },
-      "saadparwaiz1/cmp_luasnip",
-    },
+    name = "blink-cmp",
+    'saghen/blink.cmp',
+    dependencies = { 'rafamadriz/friendly-snippets' },
+    version = "*",
   },
 
   -- mini.nvim utility plugin

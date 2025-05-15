@@ -1,5 +1,6 @@
 local telescope = require("telescope.builtin")
-local cmp = require("cmp")
+local blinkcmp = require("blink.cmp")
+
 
 -- fix for auto pair curly braces doesnt work on xterm
 vim.api.nvim_set_keymap('i', '<S-{>', '{', { noremap = false })
@@ -24,22 +25,11 @@ vim.keymap.set("v", "<C-h>", "<C-Left>", {})
 vim.keymap.set("i", "<C-S-l>", "<Right>", {})
 vim.keymap.set("i", "<C-S-h>", "<Left>", {})
 
--- cmp auto complete keymap
-cmp.setup({
-  mapping = cmp.mapping.preset.insert({
-    ["<C-Enter>"] = cmp.mapping.confirm({
-      select = true,
-      behavior = cmp.ConfirmBehavior.Replace
-    }),
-    ["<C-j>"] = cmp.mapping.select_prev_item({
-      behavior = cmp.SelectBehavior.Insert
-    }),
-    ["<C-k>"] = cmp.mapping.select_next_item({
-      behavior = cmp.SelectBehavior.Insert
-    }),
-    ["<C-e>"] = cmp.mapping.abort(),
-  })
-})
+-- blink.cmp auto complete keymap
+vim.keymap.set("i", "<C-j>", blinkcmp["select_prev"], {})
+vim.keymap.set("i", "<C-k>", blinkcmp["select_next"], {})
+vim.keymap.set("i", "<C-Enter>", blinkcmp["select_and_accept"], {})
+vim.keymap.set("i", "<C-e>", blinkcmp["cancel"], {})
 
 -- telescope keymap ( quick find file )
 vim.keymap.set("n", "<C-S-p>", telescope.find_files, {})
@@ -64,7 +54,7 @@ vim.keymap.set("n", "<C-S-f>", vim.lsp.buf.format, {})
 vim.keymap.set("n", "<leader>fd", vim.lsp.buf.format, {})
 
 -- clear search highlight
-vim.keymap.set("n", "<C-/>", function ()
+vim.keymap.set("n", "<C-/>", function()
   vim.cmd("nohlsearch")
 end, {})
 

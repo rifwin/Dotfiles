@@ -30,7 +30,6 @@ PACMAN_PACKAGES = (
     "inkscape",
     "gimp",
     "github-cli",
-    "ruff",
 )
 
 # Flatpak package to install
@@ -41,7 +40,7 @@ FLATPAK_PACKAGES = (
     "org.onlyoffice.desktopeditors",
     "com.google.Chrome",
     "com.brave.Browser",
-    "net.waterfox.waterfox"
+    "net.waterfox.waterfox",
     "org.mozilla.firefox",
 )
 
@@ -51,4 +50,3 @@ package_handler.pacman_install(PACMAN_PACKAGES)
 package_handler.flatpak_update()
 package_handler.flatpak_install(FLATPAK_PACKAGES)
 package_handler.fnm_install()
-
