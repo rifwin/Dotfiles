@@ -8,21 +8,16 @@
 Hi there! 👋 Welcome to my personal dotfiles github repository. Feel free to copy, paste, and use anything you find here to customize your own setup!
 
 ### A Quick Note:
-- Issues are closed because this is a personal public repo.
-- Pull Requests also closed for the same reason.
+- issues are closed because this is a personal public repo.
+- Pull Requests are ignored for the same reason.
 - Discussions is always open! Feel free to stop by if you'd like to chat or share ideas.
 
-### Package Used:
-- hyprland
-- neovim (btw)
-- uwsm
-- hyprpaper
-- dunst
-- waybar
-- rofi
-- blueman
-- ghostty
-- yazi
+### Required Package:
+- python
+- trash-cli
+
+Just in case you interesting with other package that I use.
+You can found it on [scripts/package.py](https://github.com/rifwin/Dotfiles/blob/main/scripts/package.py)
 
 Thanks for stopping by and checking out my dotfiles! 🎉  
 Happy customizing, and I hope you find something useful here.  
