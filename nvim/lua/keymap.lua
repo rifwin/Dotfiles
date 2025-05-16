@@ -1,5 +1,4 @@
 local telescope = require("telescope.builtin")
-local blinkcmp = require("blink.cmp")
 
 
 -- fix for auto pair curly braces doesnt work on xterm
@@ -25,13 +24,7 @@ vim.keymap.set("v", "<C-h>", "<C-Left>", {})
 vim.keymap.set("i", "<C-S-l>", "<Right>", {})
 vim.keymap.set("i", "<C-S-h>", "<Left>", {})
 
--- blink.cmp auto complete keymap
-vim.keymap.set("i", "<C-j>", blinkcmp["select_prev"], {})
-vim.keymap.set("i", "<C-k>", blinkcmp["select_next"], {})
-vim.keymap.set("i", "<C-Enter>", blinkcmp["select_and_accept"], {})
-vim.keymap.set("i", "<C-e>", blinkcmp["cancel"], {})
-
--- telescope keymap ( quick find file )
+-- telescope kemap ( quick find file )
 vim.keymap.set("n", "<C-S-p>", telescope.find_files, {})
 vim.keymap.set("n", "<leader>ff", telescope.find_files, {})
 

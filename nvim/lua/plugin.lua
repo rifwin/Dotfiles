@@ -56,6 +56,14 @@ local plugins = {
     version = "*",
   },
 
+  -- luasnip snippets (totally forgot about snippets)
+  {
+    name = "luasnip",
+    "L3MON4D3/LuaSnip",
+    version = "*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+    build = "make install_jsregexp"
+  },
+
   -- mini.nvim utility plugin
   {
     name = "mini-nvim",

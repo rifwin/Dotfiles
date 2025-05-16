@@ -8,6 +8,7 @@ local neoTree = require("neo-tree")
 local lualine = require("lualine")
 local rosepineTheme = require("rose-pine")
 local blinkcmp = require("blink.cmp")
+local luasnip = require("luasnip")
 
 
 -- setup tree-sitter code highlight
@@ -19,6 +20,7 @@ treeSitter.setup({
     "c",
     "cpp",
     "javascript",
+    "typescript",
     "python",
     "lua",
     "bash",
@@ -47,22 +49,41 @@ masonLspConfig.setup({
   }
 })
 
+-- snippets from luasnip
+luasnip.setup({})
+
 -- auto completion
-blinkcmp.setup({})
-local capabilities = {
-  textDocument = {
-    foldingRange = {
-      dynamicRegistration = false,
-      lineFoldingOnly = true
+blinkcmp.setup({
+  keymap = {
+    preset = 'default',
+    ["<C-k>"] = { "select_next" },
+    ["<C-j>"] = { "select_prev" },
+    ["<C-CR>"] = { "accept" },
+  },
+  completion = {
+    documentation = {
+      auto_show = true,
+      auto_show_delay_ms = 500,
     }
+  },
+  sources = {
+    default = {
+      'lsp',
+      'path',
+      'snippets',
+      'buffer',
+      'omni'
+    },
+  },
+  fuzzy = { implementation = "prefer_rust_with_warning" },
+  signature = {
+    enabled = true
   }
-}
-capabilities = blinkcmp.get_lsp_capabilities(capabilities)
+})
 
 -- LSP configuration after Nvim 0.11+
 -- lua
 vim.lsp.config("lua_ls", {
-  capabilities = capabilities,
   settings = {
     Lua = {
       diagnostics = {
@@ -72,24 +93,30 @@ vim.lsp.config("lua_ls", {
   }
 })
 -- python
-vim.lsp.config("ruff", {
-  capabilities = capabilities,
-})
-vim.lsp.config("basedpyright", {
-  capabilities = capabilities,
-})
+vim.lsp.config("ruff", {})
+vim.lsp.config("basedpyright", {})
 -- bash
-vim.lsp.config("bashls", {
-  capabilities = capabilities,
-})
+vim.lsp.config("bashls", {})
 -- javascript/typescript
 vim.lsp.config("biome", {
-  capabilities = capabilities,
+  cmd = {
+    "biome",
+    "lsp-proxy"
+  },
+  filetypes = {
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "json"
+  },
+  root_markers = { "biome.json", ".biome.json", "package.json", ".git" },
+  single_file_support = true
 })
 -- c/cpp
-vim.lsp.config("clangd", {
-  capabilities = capabilities,
-})
+vim.lsp.config("clangd", {})
+-- zig
+vim.lsp.config("zls", {})
 
 -- auto pairs plugin
 miniPairs.setup({

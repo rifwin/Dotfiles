@@ -1,5 +1,6 @@
 import symlink_handler
 
+# "May your symlinks always point in the right direction"
 
 # This 2D tuple stores symlink pairs.
 # Each tuple contains:
