@@ -30,6 +30,9 @@ PACMAN_PACKAGES = (
     "inkscape",
     "gimp",
     "github-cli",
+    "tree-sitter",
+    "ripgrep",
+    "fd",
 )
 
 # Flatpak package to install
