@@ -33,6 +33,19 @@ PACMAN_PACKAGES = (
     "tree-sitter",
     "ripgrep",
     "fd",
+    # necessary package for hyprland
+    "hyprland",
+    "hyprpaper",
+    "dunst",
+    "waybar",
+    "rofi",
+    "xdg-desktop-portal-hyprland",
+    "hyprpolkitagent",
+    "qt5-wayland",
+    "qt6-wayland",
+    "hyprland-qt-support",
+    "brightnessctl",
+    "bc",
 )
 
 # Flatpak package to install
