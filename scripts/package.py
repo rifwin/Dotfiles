@@ -1,5 +1,8 @@
 import package_handler
 
+# Currently there is no way to do sync functionality like nix os 
+# Maybe later (if I have time to do it)
+
 # Pacman package to install
 PACMAN_PACKAGES = (
     "noto-fonts",
@@ -52,7 +55,6 @@ PACMAN_PACKAGES = (
 FLATPAK_PACKAGES = (
     "com.discordapp.Discord",
     "com.mattjakeman.ExtensionManager",
-    "org.kde.kdenlive",
     "org.onlyoffice.desktopeditors",
     "com.google.Chrome",
     "com.brave.Browser",
