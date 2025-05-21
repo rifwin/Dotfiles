@@ -51,6 +51,8 @@ PACMAN_PACKAGES = (
     "bc",
     "grim",
     "slurp",
+    "obs-studio",
+    "v4l2loopback-dkms"
 )
 
 # Flatpak package to install
