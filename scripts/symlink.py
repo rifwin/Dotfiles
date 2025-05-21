@@ -19,5 +19,4 @@ LINK_PAIRS = (
     ("$HOME/Dotfiles/yazi", "$HOME/.config/yazi", False),
 )
 
-# pass the LINK_PAIRS variable to this function to start creating symlink
 symlink_handler.create(LINK_PAIRS)

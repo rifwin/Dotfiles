@@ -49,6 +49,8 @@ PACMAN_PACKAGES = (
     "hyprland-qt-support",
     "brightnessctl",
     "bc",
+    "grim",
+    "slurp",
 )
 
 # Flatpak package to install
