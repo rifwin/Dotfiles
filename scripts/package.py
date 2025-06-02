@@ -62,8 +62,7 @@ FLATPAK_PACKAGES = (
     "org.onlyoffice.desktopeditors",
     "com.google.Chrome",
     "com.brave.Browser",
-    "net.waterfox.waterfox",
-    "org.mozilla.firefox",
+    "one.ablaze.floorp",
 )
 
 # run all install function
