@@ -63,6 +63,7 @@ FLATPAK_PACKAGES = (
     "com.google.Chrome",
     "com.brave.Browser",
     "one.ablaze.floorp",
+    "com.usebottles.bottles",
 )
 
 # run all install function
