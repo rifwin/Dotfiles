@@ -16,7 +16,7 @@ def pacman_update():
         )
         print(result.stdout)
     except subprocess.CalledProcessError as e:
-        print(text_red("Failed to install packages:\n"), e.stderr)
+        print(text_red("Failed to update pacman packages:\n"), e.stderr)
 
 
 def pacman_install(packages):
@@ -29,7 +29,7 @@ def pacman_install(packages):
         )
         print(result.stdout)
     except subprocess.CalledProcessError as e:
-        print(text_red("Failed to install packages:\n"), e.stderr)
+        print(text_red("Failed to install pacman packages:\n"), e.stderr)
 
 
 # flatpak packages utilities
@@ -42,7 +42,7 @@ def flatpak_update():
         )
         print(result.stdout)
     except subprocess.CalledProcessError as e:
-        print(text_red("Failed to install packages:\n"), e.stderr)
+        print(text_red("Failed to update flatpak packages:\n"), e.stderr)
 
 
 def flatpak_install(packages):
@@ -59,7 +59,7 @@ def flatpak_install(packages):
         )
         print(result.stdout)
     except subprocess.CalledProcessError as e:
-        print(text_red("Failed to install packages:\n"), e.stderr)
+        print(text_red("Failed to install flatpak packages:\n"), e.stderr)
 
 
 # this one for installing nodejs version manager (fnm)

@@ -32,10 +32,16 @@ PACMAN_PACKAGES = (
     "fastfetch",
     "inkscape",
     "gimp",
+    "gimp-plugin-gmic",
     "github-cli",
     "tree-sitter",
     "ripgrep",
     "fd",
+
+    # filesystem
+    "dosfstools", #fat32
+    "ntfs-3g", #ntfs
+
     # necessary package for hyprland
     "hyprland",
     "hyprpaper",
