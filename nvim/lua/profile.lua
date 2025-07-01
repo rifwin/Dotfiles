@@ -92,11 +92,14 @@ vim.lsp.config("lua_ls", {
     }
   }
 })
+
 -- python
 vim.lsp.config("ruff", {})
 vim.lsp.config("basedpyright", {})
+
 -- bash
 vim.lsp.config("bashls", {})
+
 -- javascript/typescript
 vim.lsp.config("biome", {
   cmd = {
@@ -113,8 +116,10 @@ vim.lsp.config("biome", {
   root_markers = { "biome.json", ".biome.json", "package.json", ".git" },
   single_file_support = true
 })
+
 -- c/cpp
 vim.lsp.config("clangd", {})
+
 -- zig
 vim.lsp.config("zls", {})
 

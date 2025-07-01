@@ -37,6 +37,7 @@ PACMAN_PACKAGES = (
     "tree-sitter",
     "ripgrep",
     "fd",
+    "uv",
 
     # filesystem
     "dosfstools", #fat32
