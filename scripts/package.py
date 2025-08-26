@@ -38,6 +38,10 @@ PACMAN_PACKAGES = (
     "ripgrep",
     "fd",
     "uv",
+    "podman",
+
+    # development
+    "cmake",
 
     # filesystem
     "dosfstools", #fat32
@@ -71,6 +75,7 @@ FLATPAK_PACKAGES = (
     "com.brave.Browser",
     "one.ablaze.floorp",
     "com.usebottles.bottles",
+    "com.saivert.pwvucontrol"
 )
 
 # run all install function
