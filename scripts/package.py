@@ -37,11 +37,14 @@ PACMAN_PACKAGES = (
     "tree-sitter",
     "ripgrep",
     "fd",
-    "uv",
-    "podman",
 
     # development
     "cmake",
+    "uv",
+    "podman",
+    "clang",
+    "libc++",
+    "lld",
 
     # filesystem
     "dosfstools", #fat32
