@@ -1,6 +1,6 @@
 import package_handler
 
-# Currently there is no way to do sync functionality like nix os 
+# Currently there is no way to do sync functionality like nix os
 # Maybe later (if I have time to do it)
 
 # Pacman package to install
@@ -27,7 +27,6 @@ PACMAN_PACKAGES = (
     "gst-plugins-base",
     "gst-plugins-good",
     "gst-plugins-ugly",
-    "vlc",
     "btop",
     "fastfetch",
     "inkscape",
@@ -37,19 +36,21 @@ PACMAN_PACKAGES = (
     "tree-sitter",
     "ripgrep",
     "fd",
-
+    "viu",
     # development
     "cmake",
     "uv",
     "podman",
+    "podman-compose",
+    "cuda",
+    "nvidia-container-toolkit",
     "clang",
     "libc++",
     "lld",
-
+    "llvm",
     # filesystem
-    "dosfstools", #fat32
-    "ntfs-3g", #ntfs
-
+    "dosfstools",  # fat32
+    "ntfs-3g",  # ntfs
     # necessary package for hyprland
     "hyprland",
     "hyprpaper",
@@ -66,7 +67,7 @@ PACMAN_PACKAGES = (
     "grim",
     "slurp",
     "obs-studio",
-    "v4l2loopback-dkms"
+    "v4l2loopback-dkms",
 )
 
 # Flatpak package to install
@@ -76,9 +77,8 @@ FLATPAK_PACKAGES = (
     "org.onlyoffice.desktopeditors",
     "com.google.Chrome",
     "com.brave.Browser",
-    "one.ablaze.floorp",
-    "com.usebottles.bottles",
-    "com.saivert.pwvucontrol"
+    "com.saivert.pwvucontrol",
+    "com.valvesoftware.Steam",
 )
 
 # run all install function
