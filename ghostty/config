@@ -15,3 +15,5 @@ font-size = 12
 # keybindin8
 keybind = unconsumed:ctrl+shift+enter=toggle_split_zoom
 keybind = unconsumed:ctrl+enter=toggle_split_zoom
+
+
