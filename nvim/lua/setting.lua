@@ -11,7 +11,7 @@ vim.lsp.config("lua_ls", {
 
 -- python
 vim.lsp.config("ruff", {})
-vim.lsp.config("pylyzer", {})
+vim.lsp.config("ty", {}) -- replace basedpyright
 
 -- bash
 vim.lsp.config("bashls", {})

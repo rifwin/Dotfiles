@@ -83,8 +83,8 @@ end, { expr = true, silent = true })
 -- accept
 vim.keymap.set("i", "<C-CR>", function()
   if vim.fn.pumvisible() then
-    if not vim.fn.complete_info().selected then
-      return "<C-r>"
+    if vim.fn.complete_info().selected == -1 then
+      return "<C-r><CR>"
     else
       return "<C-y>"
     end

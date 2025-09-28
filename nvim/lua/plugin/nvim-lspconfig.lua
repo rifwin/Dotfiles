@@ -23,7 +23,8 @@ return {
       },
     }
   end,
+
   config = function()
-    -- LSP settings here
-  end,
+
+  end
 }
