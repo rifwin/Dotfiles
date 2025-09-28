@@ -62,50 +62,63 @@ vim.keymap.set("n", "<C-/>", function()
 end, {})
 
 
--- coq autocompletion keymap
--- close completion menu
+-- Coq Autocompletion Keymaps
+-- Close completion menu (Standard)
 vim.keymap.set('i', '<Esc>', function()
-  if vim.fn.pumvisible() then
+  if vim.fn.pumvisible() ~= 0 then
     return "<C-e><Esc>"
   else
     return "<Esc>"
   end
-end, { expr = true, silent = true })
+end, { expr = true, silent = true, desc = 'Coq: Close menu (Esc)' })
+
+vim.keymap.set('i', '<C-c>', function()
+  if vim.fn.pumvisible() ~= 0 then
+    return "<C-e><C-c>"
+  else
+    return "<C-c>"
+  end
+end, { expr = true, silent = true, desc = 'Coq: Close menu (C-c)' })
 
 vim.keymap.set('i', '<BS>', function()
-  if vim.fn.pumvisible() then
+  if vim.fn.pumvisible() ~= 0 then
     return "<C-e><BS>"
   else
     return "<BS>"
   end
-end, { expr = true, silent = true })
+end, { expr = true, silent = true, desc = 'Coq: Close menu and backspace' })
 
--- accept
+-- ACCEPT COMPLETION: NOW ON <C-CR> (Ctrl+Enter)
+
 vim.keymap.set("i", "<C-CR>", function()
-  if vim.fn.pumvisible() then
+  if vim.fn.pumvisible() ~= 0 then
+    -- If no item is selected, close menu and press C-CR
     if vim.fn.complete_info().selected == -1 then
-      return "<C-r><CR>"
+      return "<C-e><C-CR>"
+      -- Otherwise, accept the selected completion with <C-y>
     else
       return "<C-y>"
     end
   else
     return "<C-CR>"
   end
-end, { expr = true, silent = true })
+end, { expr = true, silent = true, desc = 'Coq: Accept completion (C-CR)' })
 
--- navigation
-vim.keymap.set('i', '<C-k>', function()
-  if vim.fn.pumvisible() then
-    return ("<C-n>")
-  else
-    return ("<C-k>")
-  end
-end, { expr = true, silent = true })
-
+-- NAVIGATION (C-k and C-j)
+-- C-j: Navigate UP
 vim.keymap.set('i', '<C-j>', function()
-  if vim.fn.pumvisible() then
-    return ("<C-p>")
+  if vim.fn.pumvisible() ~= 0 then
+    return "<C-p>"
   else
-    return ("<C-j>")
+    return "<C-j>"
   end
-end, { expr = true, silent = true })
+end, { expr = true, silent = true, desc = 'Coq: Previous item (C-j)' })
+
+-- C-k: Navigate DOWN
+vim.keymap.set('i', '<C-k>', function()
+  if vim.fn.pumvisible() ~= 0 then
+    return "<C-n>" -- Next completion item
+  else
+    return "<C-k>" -- Normal C-j command
+  end
+end, { expr = true, silent = true, desc = 'Coq: Next item (C-k)' })
